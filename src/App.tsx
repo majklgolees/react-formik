@@ -3,6 +3,7 @@ import Card from "./components/card";
 import ExplicitForm from "./components/forms/explicit-form.tsx";
 import ExplicitFormWithExplicitValidation from "./components/forms/explicit-form-with-explicit-validation.tsx";
 import ExplicitFormWithExplicitValidationDebounced from "./components/forms/explicit-form-with-explicit-validation-debounced.tsx";
+import ExplicitFormWithYupValidation from "./components/forms/explicit-form-with-yup-validation.tsx";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
       </Card>
       <Card cardHeaderText="Explicit form with Formik with explicit validation. Fields are debounced">
         <ExplicitFormWithExplicitValidationDebounced></ExplicitFormWithExplicitValidationDebounced>
+      </Card>
+      <Card cardHeaderText="Explicit form with Formik with yup validation. Fields are debounced">
+        <ExplicitFormWithYupValidation></ExplicitFormWithYupValidation>
       </Card>
     </Base>
   );
