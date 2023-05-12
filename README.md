@@ -3,6 +3,15 @@ Repo was made for training purposes. React application contains several simple f
 different implementation. Some are more explicit that other, some have some extra feature build in to cover some useful
 use case. Including some notes that may not be related to Formik itself, but are found during implementation.
 
+## Installation
+```shell
+git clone https://github.com/ronwum/react-formik.git
+cd react-formik
+npm install
+npm run dev
+```
+
+
 ## Explicit form
 Simple form, most explicit, using `useFormik` hook. There is no validation, just submitting and reseting functionality.
 
