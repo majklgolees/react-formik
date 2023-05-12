@@ -8,19 +8,16 @@ const ExplicitForm = () => {
       lastName: "Doe",
     },
     onSubmit: (values) => {
-      console.log("Executing onSubmit");
       alert(JSON.stringify(values, null, 2));
     },
     onReset: () => console.log("Executing onReset"),
   });
 
   const customHandleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    console.log("Executing customHandleSubmit");
     formikForm.handleSubmit(event);
   };
 
   const customHandleReset = (event: FormEvent<HTMLFormElement>) => {
-    console.log("Executing customHandleSubmit");
     formikForm.handleReset(event);
   };
 

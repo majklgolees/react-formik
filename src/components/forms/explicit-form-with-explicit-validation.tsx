@@ -35,10 +35,8 @@ const ExplicitFormWithExplicitValidation = () => {
   });
 
   const customHandleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    console.log("Executing customHandleSubmit");
+    formikForm.handleSubmit(event);
     if (formikForm.isValid) {
-      console.log("Form is valid");
-      formikForm.handleSubmit(event);
       formikForm.setTouched({
         firstName: false,
         lastName: false,
