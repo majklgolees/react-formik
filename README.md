@@ -1,4 +1,5 @@
 # Formik Training
+#### https://formik.org/docs/tutorial
 Repo was made for training purposes. React application contains several simple forms, each has a slightly
 different implementation. Some are more explicit that other, some have some extra feature build in to cover some useful
 use case. Including some notes that may not be related to Formik itself, but are found during implementation.
