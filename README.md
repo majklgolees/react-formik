@@ -59,11 +59,21 @@ Simple form, explicit, validated, using `useFormik` hook. Fields are debounced w
 ```
 
 ## Explicit form with yup validation
-Simple form, explicit, validated with `yup`, using `useFormik` hook. Fields are debounced with `lodash`.
+Simple form, explicit, validated with `yup`, using `useFormik` hook.
 
 **Note:**
 - Validation is done by `yup` see `validationSchema`. Is much shorter and it's easier to read.
 - Notice that validation is not done by `validate` field, but by `validationSchema`.
 ```react
 <ExplicitFormWithYupValidation></ExplicitFormWithYupValidation>
+```
+
+## Less explicit form with yup validation
+Simple form, less explicit, validated with `yup`, using `useFormik` hook.
+
+**Note:**
+- Notice that input field is shortened with `{...formikForm.getFieldProps("lastName")}`.
+- Keep in mind that shortcut including `onChange`, `onBlur`, `value` and `checked`. Override it if necessary.
+```react
+<LessExplicitForm></LessExplicitForm>
 ```
