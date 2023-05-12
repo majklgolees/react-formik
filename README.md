@@ -13,10 +13,10 @@ npm run dev
 
 
 ## Explicit form
-Simple form, most explicit, using `useFormik` hook. There is no validation, just submitting and reseting functionality.
+Simple form, most explicit, using `useFormik` hook. There is no validation, just submitting and resetting functionality.
 
 **Notes:**
-- There is custom implementation of submitting and reseting form. Implementation needs to call default `handleSubmit` 
+- There is custom implementation of submitting and resetting form. Implementation needs to call default `handleSubmit` 
 and `handleReset` so Formik can react on submission and reset.
 - By default, when submitting form every form field is marked as Touched.
 - Focusing field and losing focus won't make field Touched, unless you assign onBlur handler.
@@ -78,8 +78,8 @@ Simple form, less explicit, validated with `yup`, using `useFormik` hook.
 <LessExplicitForm></LessExplicitForm>
 ```
 
-## Less less explicit form with yup validation
-Simple form, lesser explicit, validated with `yup`, using `useFormik` hook.
+## Less explicit form with yup validation by Formik component
+Simple form, less explicit, validated with `yup`, using `Forming` component.
 
 **Note:**
 - `Formik` component replaces `useFormik`.
