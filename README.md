@@ -19,6 +19,7 @@ Simple form, most explicit, using `useFormik` hook. There is no validation, just
 - There is custom implementation of submitting and reseting form. Implementation needs to call default `handleSubmit` 
 and `handleReset` so Formik can react on submission and reset.
 - By default, when submitting form every form field is marked as Touched.
+- Focusing field and losing focus won't make field Touched, unless you assign onBlur handler.
 ```react
 <ExplicitForm></ExplicitForm>
 ```
