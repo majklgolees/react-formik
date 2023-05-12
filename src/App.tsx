@@ -14,10 +14,10 @@ function App() {
       <Card cardHeaderText="Explicit form with Formik with explicit validation">
         <ExplicitFormWithExplicitValidation></ExplicitFormWithExplicitValidation>
       </Card>
-      <Card cardHeaderText="Explicit form with Formik with explicit validation. Fields are debounced">
+      <Card cardHeaderText="Explicit form with Formik with explicit validation, fields are debounced">
         <ExplicitFormWithExplicitValidationDebounced></ExplicitFormWithExplicitValidationDebounced>
       </Card>
-      <Card cardHeaderText="Explicit form with Formik with yup validation. Fields are debounced">
+      <Card cardHeaderText="Explicit form with Formik with yup validation, fields are debounced">
         <ExplicitFormWithYupValidation></ExplicitFormWithYupValidation>
       </Card>
     </Base>
