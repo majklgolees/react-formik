@@ -77,3 +77,36 @@ Simple form, less explicit, validated with `yup`, using `useFormik` hook.
 ```react
 <LessExplicitForm></LessExplicitForm>
 ```
+
+## Less less explicit form with yup validation
+Simple form, lesser explicit, validated with `yup`, using `useFormik` hook.
+
+**Note:**
+- `Formik` component replaces `useFormik`.
+- `Formik` component provide context that holds all necessary fields and handlers. Usage of `Formik` is equal to 
+following code:
+```react
+import React from 'react';
+import { useFormik } from 'formik';
+
+// Create empty context
+const FormikContext = React.createContext({});
+
+// Place all of what’s returned by useFormik into context
+export const Formik = ({ children, ...props }) => {
+  const formikStateAndHelpers = useFormik(props);
+  return (
+    <FormikContext.Provider value={formikStateAndHelpers}>
+      {typeof children === 'function'
+        ? children(formikStateAndHelpers)
+        : children}
+    </FormikContext.Provider>
+  );
+};
+```
+```react
+<LessLessExplicitForm></LessLessExplicitForm>
+```
+
+
+
