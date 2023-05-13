@@ -36,15 +36,13 @@ const ImplicitForm = () => {
               <Field name="lastName" type="text" className="form-control"/>
               <ErrorMessage name="lastName" component="label" className="text-danger mt-1"/>
             </div>
-            <div className="row">
-              <div className="d-flex justify-content-between mt-4">
-                <button type="reset" className="btn btn-secondary">
-                  Reset
-                </button>
-                <button type="submit" className="btn btn-primary">
-                  Submit
-                </button>
-              </div>
+            <div className="d-flex justify-content-between mt-4">
+              <button type="reset" className="btn btn-secondary">
+                Reset
+              </button>
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
             </div>
           </div>
         </Form>
