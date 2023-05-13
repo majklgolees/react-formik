@@ -1,37 +1,10 @@
 import Base from "./components/base.tsx";
-import Card from "./components/card";
-import ExplicitForm from "./components/forms/explicit-form.tsx";
-import ExplicitFormWithExplicitValidation from "./components/forms/explicit-form-with-explicit-validation.tsx";
-import ExplicitFormWithExplicitValidationDebounced from "./components/forms/explicit-form-with-explicit-validation-debounced.tsx";
-import ExplicitFormWithYupValidation from "./components/forms/explicit-form-with-yup-validation.tsx";
-import LessExplicitForm from "./components/forms/less-explicit-form.tsx";
-import LessLessExplicitForm from "./components/forms/less-less-explicit-form.tsx";
-import ImplicitForm from "./components/forms/implicit-form.tsx";
+import CardList from "./components/card-list.tsx";
 
 function App() {
   return (
     <Base>
-      <Card cardHeaderText="Explicit form with Formik">
-        <ExplicitForm></ExplicitForm>
-      </Card>
-      <Card cardHeaderText="Explicit form with Formik with explicit validation">
-        <ExplicitFormWithExplicitValidation></ExplicitFormWithExplicitValidation>
-      </Card>
-      <Card cardHeaderText="Explicit form with Formik with explicit validation, fields are debounced">
-        <ExplicitFormWithExplicitValidationDebounced></ExplicitFormWithExplicitValidationDebounced>
-      </Card>
-      <Card cardHeaderText="Explicit form with Formik with yup validation, fields are debounced">
-        <ExplicitFormWithYupValidation></ExplicitFormWithYupValidation>
-      </Card>
-      <Card cardHeaderText="Less explicit form with Formik">
-        <LessExplicitForm></LessExplicitForm>
-      </Card>
-      <Card cardHeaderText="Less explicit form by Formik component">
-        <LessLessExplicitForm></LessLessExplicitForm>
-      </Card>
-      <Card cardHeaderText="Implicit form by Formik component">
-        <ImplicitForm></ImplicitForm>
-      </Card>
+      <CardList/>
     </Base>
   );
 }
