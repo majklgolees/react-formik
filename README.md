@@ -14,6 +14,9 @@ npm run dev
 
 
 ## Explicit form
+```javascript
+<ExplicitForm></ExplicitForm>
+```
 Simple form, most explicit, using `useFormik` hook. There is no validation, just submitting and resetting functionality.
 
 **Notes:**
@@ -21,22 +24,22 @@ Simple form, most explicit, using `useFormik` hook. There is no validation, just
 and `handleReset` so Formik can react on submission and reset.
 - By default, when submitting form every form field is marked as Touched.
 - Focusing field and losing focus won't make field Touched, unless you assign onBlur handler.
-```javascript
-<ExplicitForm></ExplicitForm>
-```
 
 ## Explicit form with explicit validation
+```javascript
+<ExplicitFormWithExplicitValidation></ExplicitFormWithExplicitValidation>
+```
 Simple form, explicit, using `useFormik` hook. Adding validation by `valiate` field.
 
 **Note:**
 - Adding validation, it's simple but implementation is quite long. See `validate` and notice usage of `FormikValues` 
 and `FormikErrors<IFormProps>`. `IFormProps` is needed because of TypeScript.
 - Example is overriding default behavior of marking fields as Touched after submission. See `customHandleSubmit`.
-```javascript
-<ExplicitFormWithExplicitValidation></ExplicitFormWithExplicitValidation>
-```
 
 ## Explicit form with explicit validation debounced
+```javascript
+<ExplicitFormWithExplicitValidationDebounced></ExplicitFormWithExplicitValidationDebounced>
+```
 Simple form, explicit, validated, using `useFormik` hook. Fields are debounced with `lodash`.
 
 **Note:**
@@ -55,31 +58,31 @@ Simple form, explicit, validated, using `useFormik` hook. Fields are debounced w
     };
   }, [debouncedValidate, formikForm.values]);
 ```
-```javascript
-<ExplicitFormWithExplicitValidationDebounced></ExplicitFormWithExplicitValidationDebounced>
-```
 
 ## Explicit form with yup validation
+```javascript
+<ExplicitFormWithYupValidation></ExplicitFormWithYupValidation>
+```
 Simple form, explicit, validated with `yup`, using `useFormik` hook.
 
 **Note:**
 - Validation is done by `yup` see `validationSchema`. Is much shorter and it's easier to read.
 - Notice that validation is not done by `validate` field, but by `validationSchema`.
-```javascript
-<ExplicitFormWithYupValidation></ExplicitFormWithYupValidation>
-```
 
 ## Less explicit form with yup validation
+```javascript
+<LessExplicitForm></LessExplicitForm>
+```
 Simple form, less explicit, validated with `yup`, using `useFormik` hook.
 
 **Note:**
 - Notice that input field is shortened with `{...formikForm.getFieldProps("lastName")}`.
 - Keep in mind that shortcut including `onChange`, `onBlur`, `value` and `checked`. Override it if necessary.
-```javascript
-<LessExplicitForm></LessExplicitForm>
-```
 
 ## Less explicit form with yup validation by Formik component
+```javascript
+<LessLessExplicitForm></LessLessExplicitForm>
+```
 Simple form, less explicit, validated with `yup`, using `Forming` component.
 
 **Note:**
@@ -105,11 +108,11 @@ export const Formik = ({ children, ...props }) => {
   );
 };
 ```
-```javascript
-<LessLessExplicitForm></LessLessExplicitForm>
-```
 
 ## Implicit form with yup validation by Formik component
+```javascript
+<ImplicitForm></ImplicitForm>
+```
 Simple form, implicit explicit, validated with `yup`, using `Forming` `Form`, `Field`, `ErrorMessage` components.
 
 **Note:**
@@ -121,7 +124,4 @@ Simple form, implicit explicit, validated with `yup`, using `Forming` `Form`, `F
 </ErrorMessage>
 
 <ErrorMessage name="lastName" component="label" className="text-danger mt-1"/>
-```
-```javascript
-<ImplicitForm></ImplicitForm>
 ```
